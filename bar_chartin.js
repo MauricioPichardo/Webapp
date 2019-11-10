@@ -11,7 +11,7 @@ var myChart = new Chart(ctx, {
             borderColor: ["#3e95cd","#3e95cd","#3e95cd","#3e95cd","#3e95cd","#3e95cd","#3e95cd"
 
             ],
-            borderWidth: 1
+            label: '',
         }]
     },
     options: {
@@ -22,5 +22,5 @@ var myChart = new Chart(ctx, {
                 }
             }]
         }
-    }
+    },
 });

@@ -20,18 +20,16 @@ var achart = new Chart(cax, {
         pointRadius: 5,
         pointBackgroundColor: "white",
         lineTension:0,
-        showLine: true
+        showLine: true,
+        label: '',
       }
     ]
   },
   options: {
     responsive: true,
     title: {
-      display: false,
-      text: 'Website Traffic'
+      display: true,
+      text: 'Monthly Daily Average'
     }
-  },
-  legend: {
-   display: false
-}
+  }
 });
