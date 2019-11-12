@@ -121,27 +121,27 @@ h4{
 }
 
 /* Initital Layout */
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 14fr;
-  grid-template-rows: 100px 2020px;
-  background-color: RGBA(143,150,150,1);
-}
 
-.analytics-container {
+.wrapper {
     display: grid;
-    grid-template-rows: 120px 550px 400px 250px 350px 350px;
-    background-color: white;
-}
+    grid-template-rows: 0px 100px 100px 1870px;
+    background-color: RGBA(143,150,150,1);
+  }
+
+.bottom-right {
+      background-color: white;
+      grid-template-rows:120px 570px 300px 200px 350px 350px;
+  }
 
 /* Row 1 of Analytics Container */
-.analytics-title-wrapper {
+.analytics-title {
     height:120px;
 }
 
 /* Row 2 of Analytics Container */
 .visit-container{
-    padding-top:50px;
+    padding-top:20px;
+    height:550px;
 }
 
 
@@ -153,26 +153,30 @@ h4{
 /* Row 3 of Analytics Container */
 .social {
   display: grid;
+  background-color: white;
     grid-template-columns: 1fr 1fr 1fr;
     border-top-style: groove;
     border-width:1px;
+    height:200px;
 
 }
 
 /* Row 4 of Analytics Container */
 .userboard{
     border-top-style: groove;
-
+background-color: white;
     display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height:700px;
 
 }
 /* Row 5 of Analytics Container */
 .settingboard {
   border-top-style: groove;
-
+background-color: white;
   display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+          height:700px;
 }
 
 
@@ -190,13 +194,13 @@ h4{
   padding-right:20px;
 }
 
-.labels-nav{
-  background-color: RGBA(143,150,150,1);
-  margin:auto;
-    height: 120px;
+
+.top-left{
+
 }
 
-.other-nav {
+
+.top-right {
   display:flex;
   justify-content:flex-end;
   align-self: center;
@@ -216,7 +220,6 @@ h4{
 
 
 .notes {
-  float:left;
   height:40px;
 }
 
@@ -230,7 +233,7 @@ h4{
   background-color: #fa3e3e;
   border-radius: 1px;
   font-size: 10px;
-  float:right;
+
   position: relative; /* Position the badge within the relatively positioned button */
   top: 0;
   right: 0;
@@ -246,19 +249,27 @@ h4{
   text-align: center;
 }
 
-
-
-.secondary-nav{
+.bottom-left{
   background-color: #9AD8E1;
 }
 
 .svg-cont {
-    align-self: center;
-  max-width: 40%;
-  margin:auto;
-  padding-top: 30px;
+  position: relative;
+   height:65px;
+   width:65px;
+   margin-right:10px;
+   margin-left:10px;
+   /* over-ride this inline for aspect ratio other than square */
+ }
+ .scaling-svg {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top:0;
+ }
 
-}
+
 
 .anal-title {
   height:60px;
@@ -279,10 +290,25 @@ h4{
 
 }
 
+
+
+.secondary-nav{
+  background-color: #9AD8E1;
+  align-content: center;
+}
+
+.center-nav {
+  margin:auto;
+  width:80%;
+  display:flex;
+  justify-content:center;
+  padding-top:20px;
+
+}
+
 .clip {
   text-align: center;
   font-size: 35px;
-
 }
 
 
@@ -291,7 +317,6 @@ h4{
   height: 59px;
   border-bottom-style: outset;
   padding-top:10px;
-
 }
 
 
@@ -317,7 +342,6 @@ h4{
 
 /* Style the search box inside the navigation bar */
 .topnav input[type=text] {
-  float: right;
   padding: 6px;
   border: none;
   margin-top: 8px;
@@ -326,7 +350,7 @@ h4{
 }
 
 #search {
-  float:right;
+
 }
 
 form#search * {
@@ -467,21 +491,16 @@ ul li:hover {
 }
 
 .bar-container{
-    width:40%;
-    padding-right:4%;
-    padding-left:5%;
-    border-width:1px;
-    border-right-style:inset;
+    width:80%;
+    margin:auto;
 }
 
 .secchart{
+  display: grid;
+  height:300px;
   background-color: white;
-  color:white;
-  display:flex;
-  flex-wrap: wrap;
-  margin-top:48px;
-      border-top-style: groove;
-      border-top: 2px;
+    grid-template-columns: 1fr 1fr;
+
 }
 
 
@@ -575,7 +594,7 @@ h5 {
 }
 
 h6{
-    float:left;
+    
     color:black;
 }
 
@@ -689,7 +708,7 @@ h6{
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (min-width: 768px) {
   .topnav a, .topnav input[type=text] {
-    float: right;
+
 
     text-align: right;
     width: 100%;
@@ -702,60 +721,52 @@ h6{
 
   form#search label {
     display: inline;
-
+    font-size: 20px;
   }
   form#search input::placeholder {
     opacity: 0;
+    font-size: 20px;
   }
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 100px 120px 2450px;
+    grid-template-columns: 1fr 14fr;
+    grid-template-rows: 100px 2940px;
     background-color: RGBA(143,150,150,1);
   }
 
-  .analytics-container {
+  .bottom-right {
       display: grid;
-      grid-template-rows: 200px 650px 500px 300px 350px 350px;
+      grid-template-rows: 120px 720px 350px 250px 750px 750px;
       background-color: white;
   }
 
-  .labels-nav{
-    display:none;
-  }
-
-  .secondary-nav{
-    background-color: #9AD8E1;
-    align-content: center;
-  }
-
-  .center-nav {
+  .top-left{
+    background-color: RGBA(143,150,150,1);
     margin:auto;
-    width:30%;
-    display:flex;
-    justify-content:center;
-    padding-top:10px;
-
+    height: 120px;
   }
 
-  .svg-cont {
-    position: relative;
-     height:65px;
-     width:65px;
-     margin-right:10px;
-     margin-left:10px;
-     /* over-ride this inline for aspect ratio other than square */
-   }
-   .scaling-svg {
-     position: absolute;
-     height: 100%;
-     width: 100%;
-     left: 0;
-     top:0;
-   }
+  .visit-container{
+      padding-top:20px;
+      height:700px;
+  }
+
+.center-nav{
+  margin:auto;
+  display:block;
+  padding-top:20px;
+}
+
+p {
+  font-size:16px;
+}
 
    h4{
      font-size:30px;
+   }
+
+   h6{
+     font-size:16px;
    }
 
    #area-line{
@@ -767,8 +778,15 @@ h6{
    #myChart {
      width:90% !important;
      height:50% !important;
-     border-right-style: groove;
-     border-width: 1px;
+
+   }
+
+   .svg-cont {
+       align-self: center;
+     max-width: 60%;
+     margin:auto;
+     padding-top: 30px;
+
    }
 
 
@@ -781,25 +799,88 @@ h6{
 
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 100px 120px 2700px;
+    grid-template-columns: 1fr 14fr;
+    grid-template-rows: 100px 2670px;
     background-color: RGBA(143,150,150,1);
   }
 
-  .analytics-container {
+  .top-left{
+    background-color: RGBA(143,150,150,1);
+    margin:auto;
+    height: 120px;
+  }
+
+  .bottom-right {
       display: grid;
-      grid-template-rows: 200px 850px 650px 300px 350px 350px;
+      grid-template-rows: 120px 850px 550px 250px 400px 400px;
       background-color: white;
   }
 
+  .secchart{
+    display: grid;
+    height:550px;
+    background-color: white;
+      grid-template-columns: 1fr 1fr;
+
+  }
+
+    .center-nav{
+      margin:auto;
+      display:block;
+      padding-top:20px;
+    }
+
+    .social {
+      display: grid;
+      background-color: white;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-top-style: groove;
+        border-width:1px;
+        height:250px;
+
+    }
+    .userboard{
+        border-top-style: groove;
+    background-color: white;
+        display: grid;
+          grid-template-columns: 1fr 1fr;
+          height:400px;
+          font-size: 24px
+
+    }
+    /* Row 5 of Analytics Container */
+    .settingboard {
+      border-top-style: groove;
+    background-color: white;
+      display: grid;
+        grid-template-columns: 1fr 1fr;
+              height:400px;
+    }
+
   h4{
     font-size:40px;
+  }
+
+  h6{
+    font-size:24px;
   }
 
   #area-line{
     margin:auto;
     width:90% !important;
     height:650px !important;
+  }
+
+  #myChart {
+    width:90% !important;
+    height:50% !important;
+
+  }
+
+  #chartarea {
+    width:90% !important;
+    height:50% !important;
+
   }
 
 }

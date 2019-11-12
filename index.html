@@ -4,17 +4,16 @@
     <meta charset="utf-8">
     <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Chart.js-2.9.1/css/styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <link href="toggle-switch.css" rel="stylesheet">
-
-
   </head>
   <body class="wrapper">
-    <div class="labels-nav">
+    <div class="top-left">
 <div class="logo"></div>
 
     </div>
-    <div class="other-nav">
+    <div class="top-right">
+
       <div class="alertNotes " id="alertNotes">
 
         <img src="icons/icon-bell.svg" class="notes" id="note" alt="notifications">
@@ -23,7 +22,7 @@
         <img src="images/Mauricio-Pichardo-Profile.jpeg" alt="Profile Picture" class="profile-image" id="reflect">
         <p>Mauricio Pichardo</p>
     </div>
-    <div class="secondary-nav">
+    <div class="bottom-left">
       <div class="center-nav">
         <div class="svg-cont">
           <img src="icons/icon-members.svg" class="scaling-svg" alt="members">
@@ -39,7 +38,7 @@
          </div>
        </div>
     </div>
-    <div class="analytics-container">
+    <div class="bottom-right">
       <div class="analytics-title">
         <div class="anal-title">
               <div class="dashboard"> <span class="clip">Dashboard  </span>
@@ -77,6 +76,7 @@
           <canvas id="area-line"></canvas>
         </div>
       </div>
+
 
       <div class="secchart">
         <div class="bar-container">
@@ -295,7 +295,7 @@
              </div>
 </div>
 </div>
-<script src="Chart.js-2.9.1/dist/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 <script src="bar_chartin.js"></script>
 <script src="line_chartin.js"></script>
 <script src="bubble.js"></script>
