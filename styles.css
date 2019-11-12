@@ -594,7 +594,7 @@ h5 {
 }
 
 h6{
-    
+
     color:black;
 }
 
@@ -603,8 +603,7 @@ h6{
   align-self: center;
   min-height: 300px;
   min-width: 48%;
-  border-right-style: ridge;
-  border-top-style: ridge;
+
   border-width:1px;
 
 }
@@ -696,7 +695,6 @@ h6{
 
 
 #chart-area {
-  margin-top:10%;
   width:90%;
   height:70% !important;
   height:auto !important;
@@ -730,13 +728,13 @@ h6{
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 14fr;
-    grid-template-rows: 100px 2940px;
+    grid-template-rows: 100px 3140px;
     background-color: RGBA(143,150,150,1);
   }
 
   .bottom-right {
       display: grid;
-      grid-template-rows: 120px 720px 350px 250px 750px 750px;
+      grid-template-rows: 120px 420px 450px 250px 750px 750px;
       background-color: white;
   }
 
@@ -746,15 +744,33 @@ h6{
     height: 120px;
   }
 
+  .secchart{
+    display: grid;
+    height:450px;
+    background-color: white;
+      grid-template-columns: 1fr 1fr;
+
+  }
+
   .visit-container{
       padding-top:20px;
-      height:700px;
+      height:400px;
   }
 
 .center-nav{
   margin:auto;
   display:block;
   padding-top:20px;
+}
+
+.boardboxes {
+  align-self: center;
+  min-height: 300px;
+  min-width: 48%;
+  border-right-style: ridge;
+  border-top-style: ridge;
+  border-width:1px;
+
 }
 
 p {
@@ -772,12 +788,18 @@ p {
    #area-line{
      margin:auto;
      width:90% !important;
-     height:500px !important;
+     height:300px !important;
    }
 
    #myChart {
      width:90% !important;
-     height:50% !important;
+     height:70% !important;
+
+   }
+
+   #chart-area {
+     width:90% !important;
+     height:70% !important;
 
    }
 
@@ -850,7 +872,7 @@ p {
     }
     /* Row 5 of Analytics Container */
     .settingboard {
-      border-top-style: groove;
+
     background-color: white;
       display: grid;
         grid-template-columns: 1fr 1fr;
